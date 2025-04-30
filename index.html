@@ -1,0 +1,45 @@
+<!-- index.html-də <section> tagından sonra əlavə et -->
+<section>
+    <h2>Your Cart</h2>
+    <ul id="cart">
+        <li>Pink Baby Dress - $19.99</li>
+        <li>Blue Onesie - $14.99</li>
+    </ul>
+    <button onclick="placeOrder()">Place Order</button>
+    <p id="orderStatus" style="color: green;"></p>
+</section>
+
+<section>
+    <h2>Leave a Review</h2>
+    <form onsubmit="addReview(event)">
+        <input type="text" id="reviewInput" placeholder="Write your review..." required>
+        <button type="submit">Submit</button>
+    </form>
+    <ul id="reviewList"></ul>
+</section>
+
+<script>
+    function placeOrder() {
+        document.getElementById("orderStatus").textContent = "✅ Your order has been placed!";
+    }
+
+    function escapeHTML(text) {
+        return text
+            .replace(/&/g, "&amp;")
+            .replace(/</g, "&lt;")
+            .replace(/>/g, "&gt;");
+    }
+
+    function addReview(event) {
+        event.preventDefault();
+        const input = document.getElementById("reviewInput");
+        const text = escapeHTML(input.value);
+        const list = document.getElementById("reviewList");
+
+        const li = document.createElement("li");
+        li.innerText = text;
+        list.appendChild(li);
+
+        input.value = "";
+    }
+</script>
