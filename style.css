@@ -1,59 +1,108 @@
+/* General layout */
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f7f7f7;
-    color: #333;
+    font-family: 'Nunito', sans-serif;
     margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+/* Navigation */
+nav {
+    background-color: #8E7C57; /* Granola tone */
+    padding: 10px 0;
+    text-align: center;
+}
+
+nav .logo h1 {
+    color: white;
+    font-size: 24px;
+    margin: 0;
+}
+
+nav ul {
+    list-style-type: none;
     padding: 0;
 }
 
+nav ul li {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+}
+
+/* Header */
 header {
-    background-color: #fff;
-    padding: 20px;
     text-align: center;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-top: 30px;
 }
 
-header h1 {
-    margin: 0;
-    font-size: 2em;
-    color: #5a5a5a;
+header h2 {
+    font-size: 36px;
+    color: #8E7C57;
 }
 
-main {
-    padding: 20px;
+header p {
+    font-size: 20px;
+}
+
+/* Products section */
+#products {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 30px;
 }
 
 .product {
-    display: inline-block;
-    width: 30%;
-    margin: 10px;
     background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    transition: transform 0.3s ease;
-}
-
-.product:hover {
-    transform: scale(1.05);
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
 }
 
 .product img {
     width: 100%;
-    height: auto;
+    border-radius: 10px;
+    max-height: 250px;
+    object-fit: cover;
 }
 
-.product-info {
-    padding: 15px;
+.product h3 {
+    color: #555;
+    font-size: 20px;
+}
+
+.product .price {
+    font-size: 22px;
+    color: #8E7C57;
+    font-weight: bold;
+}
+
+.product .view-details {
+    display: inline-block;
+    background-color: #8E7C57;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-top: 10px;
+}
+
+.product .view-details:hover {
+    background-color: #5a4d35;
+}
+
+/* Footer */
+footer {
     text-align: center;
+    padding: 20px;
+    background-color: #8E7C57;
+    color: white;
+    margin-top: 40px;
 }
-
-.product-info h2 {
-    font-size: 1.2em;
-    color: #333;
-}
-
-.product-info p {
-   
-::contentReference[oaicite:0]{index=0}
- 
