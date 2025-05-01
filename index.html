@@ -1,30 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Miniboo</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Miniboo - Kids Clothing</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
     <script src="{{ url_for('static', filename='js/main.js') }}"></script>
 </head>
 <body>
-    <!-- Navigation -->
+    <!-- Navigation Bar -->
     <nav>
-        <div class="nav-container">
-            <div class="logo">
-                <img src="{{ url_for('static', filename='images/logo.png') }}" alt="Miniboo Logo">
-                <h1>Miniboo</h1>
-            </div>
-            <ul class="nav-links">
-                <li><a href="/">Home</a></li>
-                <li><a href="/contact">Contact</a></li>
-            </ul>
-            <ul class="auth-links">
-                <li><a href="/login">Login</a></li>
-                <li><a href="/register">Register</a></li>
-                <li><a href="/cart">Cart</a></li>
-            </ul>
+        <div class="logo">
+            <img src="{{ url_for('static', filename='images/logo.png') }}" alt="Miniboo Logo">
+            <h1>Miniboo</h1>
         </div>
+        <ul>
+            <li><a href="/">Ana Səhifə</a></li>
+            <li><a href="/login">Daxil Ol</a></li>
+            <li><a href="/register">Qeydiyyat</a></li>
+            <li><a href="/cart">Səbət</a></li>
+            <li><a href="#contact">Əlaqə</a></li>
+        </ul>
     </nav>
 
     <!-- Header -->
@@ -32,14 +28,9 @@
         <h2>Adorable Clothing for Kids</h2>
         <p>Find the newest and cutest kids clothing here!</p>
         <input type="text" placeholder="Search..." id="search">
-        <div class="animal-icons">
-            <img src="{{ url_for('static', filename='images/giraffe.png') }}" alt="Giraffe" class="animal bounce">
-            <img src="{{ url_for('static', filename='images/bunny.png') }}" alt="Bunny" class="animal bounce-delay">
-            <img src="{{ url_for('static', filename='images/lion.png') }}" alt="Lion" class="animal bounce">
-        </div>
     </header>
 
-    <!-- Products -->
+    <!-- Products List -->
     <section id="products">
         <div class="product">
             <img src="{{ url_for('static', filename='images/product1.jpg') }}" alt="Product 1">
@@ -64,16 +55,21 @@
         </div>
     </section>
 
+    <!-- Contact Section (At the bottom now) -->
+    <section id="contact">
+        <h3>Əlaqə</h3>
+        <p>Bize yazın!</p>
+        <form action="#">
+            <input type="text" placeholder="Adınız" required>
+            <input type="email" placeholder="E-poçt" required>
+            <textarea placeholder="Mesajınızı yazın" required></textarea>
+            <button type="submit">Göndər</button>
+        </form>
+    </section>
+
     <!-- Footer -->
     <footer>
-        <div class="footer-left">
-            <p>Contact us: info@miniboo.com</p>
-            <p>Follow us: 
-                <a href="#">Instagram</a> | 
-                <a href="#">Facebook</a>
-            </p>
-        </div>
-        <p>&copy; 2025 Miniboo. All rights reserved.</p>
+        <p>&copy; 2025 Miniboo Kids Clothing. All rights reserved.</p>
     </footer>
 </body>
 </html>
