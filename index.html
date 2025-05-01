@@ -1,26 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Miniboo</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
     <script src="{{ url_for('static', filename='js/main.js') }}"></script>
 </head>
 <body>
-    <!-- Navigation Bar -->
-    <nav class="navbar">
-        <div class="logo">
-            <img src="{{ url_for('static', filename='images/animal_logo.gif') }}" alt="Miniboo Logo">
-            <h1>Miniboo</h1>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <div class="logo">
+                <img src="{{ url_for('static', filename='images/logo.png') }}" alt="Miniboo Logo">
+                <h1>Miniboo</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="/">Home</a></li>
+                <li><a href="/contact">Contact</a></li>
+            </ul>
+            <ul class="auth-links">
+                <li><a href="/login">Login</a></li>
+                <li><a href="/register">Register</a></li>
+                <li><a href="/cart">Cart</a></li>
+            </ul>
         </div>
-        <ul class="nav-left">
-            <li><a href="/">Home</a></li>
-        </ul>
-        <ul class="nav-right">
-            <li><a href="/login">Login</a></li>
-            <li><a href="/register">Register</a></li>
-        </ul>
     </nav>
 
     <!-- Header -->
@@ -28,53 +32,48 @@
         <h2>Adorable Clothing for Kids</h2>
         <p>Find the newest and cutest kids clothing here!</p>
         <input type="text" placeholder="Search..." id="search">
+        <div class="animal-icons">
+            <img src="{{ url_for('static', filename='images/giraffe.png') }}" alt="Giraffe" class="animal bounce">
+            <img src="{{ url_for('static', filename='images/bunny.png') }}" alt="Bunny" class="animal bounce-delay">
+            <img src="{{ url_for('static', filename='images/lion.png') }}" alt="Lion" class="animal bounce">
+        </div>
     </header>
 
-    <!-- Animated Animal Icons -->
-    <div id="animated-animals">
-        <img src="{{ url_for('static', filename='images/giraffe.gif') }}" alt="Giraffe" class="animal-icon">
-        <img src="{{ url_for('static', filename='images/bunny.gif') }}" alt="Bunny" class="animal-icon">
-        <img src="{{ url_for('static', filename='images/tiger.gif') }}" alt="Tiger" class="animal-icon">
-        <img src="{{ url_for('static', filename='images/cat.gif') }}" alt="Cat" class="animal-icon">
-    </div>
-
-    <!-- Products List -->
+    <!-- Products -->
     <section id="products">
         <div class="product">
             <img src="{{ url_for('static', filename='images/product1.jpg') }}" alt="Product 1">
             <h3>Product 1</h3>
             <p>Color: Green, Size: 3-4 Years</p>
             <p class="price">$25.99</p>
-            <a href="/product/1" class="view-details">View Details</a>
+            <a href="/product1" class="view-details">View Details</a>
         </div>
         <div class="product">
             <img src="{{ url_for('static', filename='images/product2.jpg') }}" alt="Product 2">
             <h3>Product 2</h3>
             <p>Color: Blue, Size: 5-6 Years</p>
             <p class="price">$30.99</p>
-            <a href="/product/2" class="view-details">View Details</a>
+            <a href="/product2" class="view-details">View Details</a>
         </div>
         <div class="product">
             <img src="{{ url_for('static', filename='images/product3.jpg') }}" alt="Product 3">
             <h3>Product 3</h3>
             <p>Color: Red, Size: 7-8 Years</p>
             <p class="price">$35.99</p>
-            <a href="/product/3" class="view-details">View Details</a>
+            <a href="/product3" class="view-details">View Details</a>
         </div>
     </section>
 
     <!-- Footer -->
     <footer>
         <div class="footer-left">
-            <a href="/contact">Contact</a>
+            <p>Contact us: info@miniboo.com</p>
+            <p>Follow us: 
+                <a href="#">Instagram</a> | 
+                <a href="#">Facebook</a>
+            </p>
         </div>
-        <div class="footer-right">
-            <p>&copy; 2025 Miniboo Store. All rights reserved.</p>
-            <div class="social-icons">
-                <a href="#"><img src="{{ url_for('static', filename='images/facebook-icon.png') }}" alt="Facebook"></a>
-                <a href="#"><img src="{{ url_for('static', filename='images/instagram-icon.png') }}" alt="Instagram"></a>
-            </div>
-        </div>
+        <p>&copy; 2025 Miniboo. All rights reserved.</p>
     </footer>
 </body>
 </html>
